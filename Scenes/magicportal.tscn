@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://dtecl1womo1to"]
+
+[ext_resource type="Script" uid="uid://0se3b7qoba56" path="res://Scenes/character_body_2d.gd" id="1_uugb8"]
+[ext_resource type="Texture2D" uid="uid://kgtojg4ymtmb" path="res://assets/fireball.png" id="2_l2mur"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7if0p"]
+atlas = ExtResource("2_l2mur")
+region = Rect2(0, 384, 512, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbi3a"]
+atlas = ExtResource("2_l2mur")
+region = Rect2(512, 384, 512, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4r6m"]
+atlas = ExtResource("2_l2mur")
+region = Rect2(1024, 384, 512, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie3m1"]
+atlas = ExtResource("2_l2mur")
+region = Rect2(1536, 384, 512, 384)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8td5p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7if0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbi3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4r6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie3m1")
+}],
+"loop": true,
+"name": &"portal",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="Node2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_uugb8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(100.000015, 0)
+scale = Vector2(0.6, 0.625)
+sprite_frames = SubResource("SpriteFrames_8td5p")
+animation = &"portal"
+frame_progress = 0.1670857
+speed_scale = 4.0

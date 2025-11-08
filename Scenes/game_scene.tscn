@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cnffhn757qltp"]
+[gd_scene load_steps=13 format=4 uid="uid://cnffhn757qltp"]
 
 [ext_resource type="PackedScene" uid="uid://cqalfqs68tnhk" path="res://Scenes/player.tscn" id="1_x87qo"]
 [ext_resource type="Texture2D" uid="uid://cxi6wqai780i2" path="res://assets/TX Tileset Grass.png" id="2_1ixah"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://3u7am1dvk5st" path="res://assets/TX Tileset Wall.png" id="4_2fmhe"]
 [ext_resource type="Texture2D" uid="uid://diplsygixuglc" path="res://assets/TX Struct.png" id="5_7iton"]
 [ext_resource type="AudioStream" uid="uid://7eu60ivwqod0" path="res://music/Ambient 2.mp3" id="6_rgj8m"]
+[ext_resource type="PackedScene" uid="uid://dtecl1womo1to" path="res://Scenes/magicportal.tscn" id="7_2fmhe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ikfsv"]
 texture = ExtResource("2_1ixah")
@@ -1031,6 +1032,8 @@ use_parent_material = true
 tile_set = SubResource("TileSet_x87qo")
 
 [node name="player" parent="." instance=ExtResource("1_x87qo")]
+
+[node name="CharacterBody2D" parent="player" instance=ExtResource("7_2fmhe")]
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(2, 2)
