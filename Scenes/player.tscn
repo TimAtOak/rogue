@@ -154,7 +154,6 @@ unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_x3wgy")
 animation = &"Sprinting"
 autoplay = "Idle"
-frame_progress = 0.4365794
 
 [node name="collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_3smsa")

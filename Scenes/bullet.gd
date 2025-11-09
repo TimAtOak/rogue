@@ -10,14 +10,11 @@ func _ready() -> void:
 	global_position=pos
 	global_rotation=rota
 	%fireball.play()
-	%fireball.animation_finished.connect(_on_animation_finished)
-
-
-func _on_animation_finished():
-	queue_free()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	velocity=Vector2(speed,0).rotated(dir)
-	move_and_slide()
+func _physics_process(_delta: float) -> void:
+	velocity = Vector2(speed, 0).rotated(dir)
+	var collision = move_and_collide(velocity * _delta)
+	if collision:
+		queue_free()

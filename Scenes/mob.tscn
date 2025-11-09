@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=3 uid="uid://r3ukd8clrqso"]
+
+[ext_resource type="Script" uid="uid://brc3gawwypn60" path="res://Scenes/mob.gd" id="1_nokgg"]
+[ext_resource type="Texture2D" uid="uid://cocnnkw5ulcgo" path="res://dinoCharactersVersion1.1/sheets/DinoSprites - mort.png" id="2_ubaqv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p11y5"]
+radius = 6.0
+height = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5nov"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(408, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3mxk"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(432, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qmh0"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(456, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfurk"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(480, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ieysi"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(504, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cixyi"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(528, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ulmv"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(552, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pcqmr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5nov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3mxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qmh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfurk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ieysi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cixyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ulmv")
+}],
+"loop": true,
+"name": &"Sprinting",
+"speed": 12.0
+}]
+
+[node name="Mob" type="CharacterBody2D"]
+script = ExtResource("1_nokgg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_p11y5")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_pcqmr")
+animation = &"Sprinting"
+frame_progress = 0.375566

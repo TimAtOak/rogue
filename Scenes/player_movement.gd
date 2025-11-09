@@ -16,10 +16,11 @@ func _physics_process(_delta):
 	if character_direction:
 		if Input.is_action_pressed("sprint"):
 			velocity = character_direction * sprint
+			%sprite.animation = "Sprinting"
 		else:	
 			velocity = character_direction * movement_speed
-
-		if %sprite.animation != "Walking": %sprite.animation = "Walking"
+			if %sprite.animation != "Walking": %sprite.animation = "Walking"
+		
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, movement_speed)
 		if %sprite.animation != "Idle": %sprite.animation = "Idle"
