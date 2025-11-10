@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cqalfqs68tnhk"]
+[gd_scene load_steps=24 format=3 uid="uid://cqalfqs68tnhk"]
 
 [ext_resource type="Script" uid="uid://d4bb8gwn3dl63" path="res://Scenes/player_movement.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://b534f2jq4s3vs" path="res://dinoCharactersVersion1.1/sheets/DinoSprites - tard.png" id="1_v0iea"]
@@ -144,7 +144,15 @@ animations = [{
 radius = 6.0
 height = 18.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+radius = 7.0
+height = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvnsp"]
+bg_color = Color(0.3638132, 0.6941116, 0.107211165, 1)
+
 [node name="player" type="CharacterBody2D"]
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_cvnsp")
 movement_speed = 150.0
@@ -160,3 +168,23 @@ shape = SubResource("CapsuleShape2D_3smsa")
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(7, 3)
+
+[node name="Hurtbox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CapsuleShape2D_cvnsp")
+debug_color = Color(0.8576736, 0.29065415, 0.5705274, 0.41960785)
+
+[node name="Healthbar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -21.0
+offset_top = -19.0
+offset_right = 21.0
+offset_bottom = -14.0
+theme_override_colors/font_color = Color(0.38789645, 0.98546225, 0, 1)
+theme_override_styles/fill = SubResource("StyleBoxFlat_cvnsp")
+value = 100.0
+rounded = true
+show_percentage = false

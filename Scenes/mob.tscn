@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://r3ukd8clrqso"]
+[gd_scene load_steps=16 format=3 uid="uid://r3ukd8clrqso"]
 
 [ext_resource type="Script" uid="uid://brc3gawwypn60" path="res://Scenes/mob.gd" id="1_nokgg"]
 [ext_resource type="Texture2D" uid="uid://cocnnkw5ulcgo" path="res://dinoCharactersVersion1.1/sheets/DinoSprites - mort.png" id="2_ubaqv"]
@@ -6,6 +6,18 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p11y5"]
 radius = 6.0
 height = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8nqw"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(336, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b44se"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(360, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypr7k"]
+atlas = ExtResource("2_ubaqv")
+region = Rect2(384, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s5nov"]
 atlas = ExtResource("2_ubaqv")
@@ -39,6 +51,20 @@ region = Rect2(552, 0, 24, 24)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_u8nqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b44se")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypr7k")
+}],
+"loop": true,
+"name": &"Hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_s5nov")
 }, {
 "duration": 1.0,
@@ -64,15 +90,29 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8nqw"]
+bg_color = Color(0.90588236, 0.015686275, 0, 1)
+
 [node name="Mob" type="CharacterBody2D"]
 script = ExtResource("1_nokgg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_p11y5")
 
-[node name="sprite" type="AnimatedSprite2D" parent="."]
+[node name="mobsprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(-1, -1)
 sprite_frames = SubResource("SpriteFrames_pcqmr")
-animation = &"Sprinting"
-frame_progress = 0.375566
+animation = &"Hurt"
+frame_progress = 0.58373195
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -16.0
+offset_top = -18.0
+offset_right = 16.0
+offset_bottom = -14.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_u8nqw")
+max_value = 3.0
+value = 3.0
+show_percentage = false
