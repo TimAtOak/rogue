@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dtecl1womo1to"]
 
-[ext_resource type="Script" uid="uid://0se3b7qoba56" path="res://Scenes/character_body_2d.gd" id="1_uugb8"]
+[ext_resource type="Script" uid="uid://0se3b7qoba56" path="res://Scenes/magicportal/character_body_2d.gd" id="1_uugb8"]
 [ext_resource type="Texture2D" uid="uid://kgtojg4ymtmb" path="res://assets/fireball.png" id="2_l2mur"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7if0p"]

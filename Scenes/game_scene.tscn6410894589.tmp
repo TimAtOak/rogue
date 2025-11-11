@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=4 uid="uid://cnffhn757qltp"]
 
 [ext_resource type="Script" uid="uid://bqrcxwi4pld12" path="res://Scenes/game_scene.gd" id="1_ldntv"]
-[ext_resource type="PackedScene" uid="uid://cqalfqs68tnhk" path="res://Scenes/player/player.tscn" id="1_x87qo"]
+[ext_resource type="PackedScene" uid="uid://cqalfqs68tnhk" path="res://Scenes/player.tscn" id="1_x87qo"]
 [ext_resource type="Texture2D" uid="uid://cxi6wqai780i2" path="res://assets/TX Tileset Grass.png" id="2_1ixah"]
 [ext_resource type="Texture2D" uid="uid://dj7ooahxrybbs" path="res://assets/TX Tileset Stone Ground.png" id="3_rgj8m"]
 [ext_resource type="Texture2D" uid="uid://3u7am1dvk5st" path="res://assets/TX Tileset Wall.png" id="4_2fmhe"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b40ccvmw5bj0t" path="res://assets/TX Shadow.png" id="5_ikfsv"]
 [ext_resource type="Texture2D" uid="uid://clkmxiqk2kcyi" path="res://assets/TX Props.png" id="6_5dgvu"]
 [ext_resource type="AudioStream" uid="uid://7eu60ivwqod0" path="res://music/Ambient 2.mp3" id="6_rgj8m"]
-[ext_resource type="PackedScene" uid="uid://dtecl1womo1to" path="res://Scenes/magicportal/magicportal.tscn" id="7_2fmhe"]
+[ext_resource type="PackedScene" uid="uid://dtecl1womo1to" path="res://Scenes/magicportal.tscn" id="7_2fmhe"]
 [ext_resource type="Texture2D" uid="uid://gijqkt4nbrca" path="res://assets/TX Plant.png" id="7_uscyt"]
 [ext_resource type="Texture2D" uid="uid://dv14y2ufiaryk" path="res://assets/TX Player.png" id="8_4xiap"]
 [ext_resource type="Texture2D" uid="uid://cgowhq4e7ofat" path="res://assets/TX Shadow Plant.png" id="9_4xiap"]
@@ -2199,7 +2199,6 @@ text = "Game Over"
 
 [node name="Start" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
-process_mode = 3
 
 [node name="ColorRect" type="ColorRect" parent="Start"]
 anchors_preset = 8

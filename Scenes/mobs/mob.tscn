@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://r3ukd8clrqso"]
 
-[ext_resource type="Script" uid="uid://brc3gawwypn60" path="res://Scenes/mob.gd" id="1_nokgg"]
+[ext_resource type="Script" uid="uid://brc3gawwypn60" path="res://Scenes/mobs/mob.gd" id="1_nokgg"]
 [ext_resource type="Texture2D" uid="uid://cocnnkw5ulcgo" path="res://dinoCharactersVersion1.1/sheets/DinoSprites - mort.png" id="2_ubaqv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p11y5"]

@@ -1,7 +1,9 @@
-[gd_scene load_steps=37 format=3 uid="uid://dnes4bynpuh6i"]
+[gd_scene load_steps=39 format=3 uid="uid://dnes4bynpuh6i"]
 
 [ext_resource type="Texture2D" uid="uid://kgtojg4ymtmb" path="res://assets/fireball.png" id="1_v7oki"]
-[ext_resource type="Script" uid="uid://cye7uxcy2o4ij" path="res://Scenes/bullet.gd" id="1_v8qja"]
+[ext_resource type="Script" uid="uid://cye7uxcy2o4ij" path="res://Scenes/bullet/bullet.gd" id="1_v8qja"]
+[ext_resource type="AudioStream" uid="uid://cirhgwpd3vlej" path="res://music/Fire Spell Impacts/Fire Spell Impact 5.wav" id="3_ycag2"]
+[ext_resource type="AudioStream" uid="uid://cwdwtxgv3jk5n" path="res://music/Fire Spell Impacts/Fire Spell Impact 1.wav" id="4_6afsh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v8qja"]
 atlas = ExtResource("1_v7oki")
@@ -253,5 +255,13 @@ frame_progress = 0.16728544
 position = Vector2(31, -5.9604645e-08)
 scale = Vector2(0.1, 0.1)
 shape = SubResource("RectangleShape2D_jserb")
+
+[node name="fire" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_ycag2")
+
+[node name="impact" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_6afsh")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

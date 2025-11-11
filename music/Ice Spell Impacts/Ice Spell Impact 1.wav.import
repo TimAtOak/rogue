@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bxocjun5w43la"
+path="res://.godot/imported/Ice Spell Impact 1.wav-d8e5c35f4d5bfec59f102a46b7ef3d55.sample"
+
+[deps]
+
+source_file="res://music/Ice Spell Impacts/Ice Spell Impact 1.wav"
+dest_files=["res://.godot/imported/Ice Spell Impact 1.wav-d8e5c35f4d5bfec59f102a46b7ef3d55.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bl3b2a04jq2bg"
+path="res://.godot/imported/Water Spell Impact 3.wav-8b4d0e568e6a17c59fd0a797dc9ef45d.sample"
+
+[deps]
+
+source_file="res://music/Water Spell Impacts/Water Spell Impact 3.wav"
+dest_files=["res://.godot/imported/Water Spell Impact 3.wav-8b4d0e568e6a17c59fd0a797dc9ef45d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

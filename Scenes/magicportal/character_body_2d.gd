@@ -1,6 +1,6 @@
 extends Node2D
 
-var bullet_path = preload("res://Scenes/bullet.tscn")
+var bullet_path = preload("res://Scenes/bullet/bullet.tscn")
 
 func fire():
 	var bullet = bullet_path.instantiate()
@@ -12,5 +12,5 @@ func fire():
 
 func _process(_delta: float) -> void:
 	look_at(get_global_mouse_position())
-	if Input.is_action_just_pressed("fire"):
+	if Input.is_action_pressed("fire"):
 		fire()

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://crhk5rqf5ej6s"
+path="res://.godot/imported/Lightning Spell Impact 3.wav-9a5ac24c7ae2e89b3cd42c40f2e01770.sample"
+
+[deps]
+
+source_file="res://music/Lightning Spell Impacts/Lightning Spell Impact 3.wav"
+dest_files=["res://.godot/imported/Lightning Spell Impact 3.wav-9a5ac24c7ae2e89b3cd42c40f2e01770.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
